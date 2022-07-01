@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+/*
+VARIABLES
+*/
+:root{
+    --onyx-color: #202224;
+    --gold-color: gold;
+    --azure-color: azure;
+    --background-color: #d8e1e8;
+    --h1-hover-color: rgb(37, 37, 37);
+    --prime-structure-size: 960px;
+    --universal-box-shadow: 0px 0px 5px 2px #00000055;
+}
+
+
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: var(--azure-color);
+    text-align: justify;
+    font-size: medium;
+    width: var(--prime-structure-size);
+    margin: auto;
+}
+
+
+
+/*
+HEADER SETTINGS
+*/
+header{    
+    box-shadow: var(--universal-box-shadow);
+    position: relative;
+}
+/*
+WEBSITE TITLE SETTINGS
+*/
+header > h1{
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--onyx-color);
+    color: var(--azure-color);
+    position: absolute;
+    top: 100px;
+    left: 25px;
+    padding: 5px;
+    border-radius: 1px;
+}
+header > h1:hover{
+    color: var(--gold-color);
+    transition: 0.5s;
+}
+p#subtitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    position: absolute;
+    top: 160px;
+    left: 25px;
+    padding: 0px 5px 0px 5px;
+    color: var(--azure-color);
+    background-color: var(--onyx-color);
+    font-size: large;
+}
+p#subtitle:hover{
+    color: var(--gold-color);
+    transition: 0.5s;
+}
+header > img{
+   width: 100%;
+   height: 100%;
+   margin-bottom: -5px;
+}
+
+
+
+nav{
+    background-color: var(--onyx-color);
+    box-shadow: var(--universal-box-shadow);
+    margin-bottom: 15px;
+    margin-top: 11px;
+    padding-top: 13px;
+    padding-bottom: 13px;    
+}
+nav > a{
+    color: var(--azure-color);
+    text-decoration: none;
+    padding: 13px;
+    font-weight: bold;
+}
+nav > a:hover{
+    transition: 0.5s;
+    color: var(--h1-hover-color);
+    background-color: var(--gold-color);
+    box-shadow: var(--universal-box-shadow);
+}
+
+
+
+
+/*
+[GRID] - CONTAINER BOX WITH CHILDREN CONTENTS AND SIDEBAR
+*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: 0px 0px 5px 1px #0000005e;
+}
+
+
+
+/*
+MAIN STRUCTURE AND VALUES INHERITED BY THEIR CHILDREN SECTIONS, ARTICLES, ETC.
+*/
+main{
+    background-color: var(--background-color);
+}
+main > section{
+    padding: 15px;
+}
+section > article{
+    background-color: var(--azure-color);
+    box-shadow: var(--universal-box-shadow);
+    margin: 10px auto 20px auto;
+    padding: 2px 15px 15px 15px;    
+}
+article > h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    text-align: left;
+    background-color: var(--onyx-color);
+    color: var(--azure-color);
+    box-shadow: var(--universal-box-shadow);
+    padding: 5px;    
+}
+article > h1:hover{
+    transition: 0.5s;
+    background-color: var(--gold-color);
+    color: var(--h1-hover-color);
+}
+article > img:hover{
+    transition: 0.5s;
+    box-shadow: var(--universal-box-shadow);
+}
+aside{
+    margin-top: 8px;
+    text-align: end;
+    padding: 2px;
+    background-color: var(--background-color);
+    box-shadow: 1px 1px 1px 1px #0000004a;
+}
+aside:hover{
+    transition: 0.5s;
+    background-color: var(--onyx-color);
+    color: var(--azure-color);
+    box-shadow: 1px 1px 1px 1px #0000004a;
+}
+
+
+
+/*
+FLEX-BOX (TO INSERT IMAGES IN THE SAME ROW)
+*/
+
+span{
+    display: flex;
+    flex-direction: row;
+}
+span > img{
+    width: 250px;
+}
+span > img:hover{
+    transition: 0.5s;
+    width: 250px;
+    height: 100%;
+    box-shadow: var(--universal-box-shadow);
+}
+span > p{
+    margin-top: 0px;
+    padding-left: 15px;
+    padding-right: 17px;
+    height: 350px;
+    overflow-y: hidden;
+}
+span > p:hover{
+    padding-right: 0px;
+    overflow-y: scroll;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*
+RESIZE SPECIFIC ARTICLES
+*/
+article#secondArticle > span > p{
+    height: 230px;
+}
+
+
+@keyframes fade{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes fade{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-webkit-keyframes fade {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-o-keyframes fade {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-ms-keyframes fade {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+
+
+/*
+RODAPÉ
+*/
+footer > p{
+    padding: 32px;
+    color: var(--azure-color);
+    background-color: var(--onyx-color);
+    box-shadow: var(--universal-box-shadow);
+    font-weight: bolder;
+}
+footer > p:hover{
+    transition: 0.5s;
+    color: var(--gold-color);   
+}
