@@ -49,10 +49,10 @@ header > h1{
     padding: 5px;
     margin: 0;
     border-radius: 1px;
+    transition: 0.5s;
 }
 header > h1:hover{
-    color: var(--gold-color);
-    transition: 0.5s;
+    color: var(--gold-color);    
 }
 header > img{
    width: 100%;
@@ -73,11 +73,11 @@ nav > a{
     padding: 13px;
     font-weight: bold;
 }
-nav > a:hover{
-    transition: 0.5s;
+nav > a:hover{    
     color: var(--h1-hover-color);
     background-color: var(--gold-color);
     box-shadow: var(--shadow);
+    transition: 0.5s;
 }
 nav .mobile{
     display: none;
@@ -143,7 +143,7 @@ section > article{
     background-color: var(--azure-color);
     box-shadow: var(--shadow);
     margin: 10px auto 20px auto;
-    padding: 2px 15px 15px 15px;    
+    padding: 2px 15px 15px 15px;
 }
 article > h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -152,18 +152,25 @@ article > h1{
     background-color: var(--onyx-color);
     color: var(--azure-color);
     box-shadow: var(--shadow);
-    padding: 5px;    
+    padding: 5px;
+    transition: 0.5s;
 }
 article > h1:hover{
-    transition: 0.5s;
     background-color: var(--gold-color);
     color: var(--h1-hover-color);
 }
+section{
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+section:hover{
+    padding: 8px;    
+}
 article > img{
     box-shadow: var(--shadow);
+    transition: 0.5s;
 }
 article > img:hover{
-    transition: 0.5s;
     box-shadow: var(--thick-shadow);
 }
 aside{
@@ -172,9 +179,9 @@ aside{
     padding: 2px;
     background-color: var(--background-color);
     box-shadow: 1px 1px 1px 1px #0000004a;
-}
-aside:hover{
     transition: 0.5s;
+}
+aside:hover{    
     background-color: var(--onyx-color);
     color: var(--azure-color);
     box-shadow: 1px 1px 1px 1px #0000004a;
@@ -192,9 +199,9 @@ span{
 }
 span > img{
     width: 250px;
-}
-span > img:hover{
     transition: 0.5s;
+}
+span > img:hover{    
     width: 250px;
     height: 100%;
     box-shadow: var(--shadow);
@@ -249,18 +256,18 @@ article#secondArticle > span > p{
 
 
 footer{
-    padding: 0 0 32px 0;
+    padding: 0 0 30px 0;
     background-color: var(--onyx-color);
     box-shadow: var(--shadow);
 }
 footer > p{
-    padding-top: 5%;
+    padding-top: 8vh;
     text-align: center;
     color: var(--azure-color);
     font-weight: bolder;
-}
-footer > p:hover{
     transition: 0.5s;
+}
+footer > p:hover{    
     color: var(--gold-color);   
 }
 
