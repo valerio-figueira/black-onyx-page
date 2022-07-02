@@ -7,23 +7,33 @@
     <title>Black Onyx</title>
     <link rel="shortcut icon" href="img/k-black-box-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="navbar.js" defer></script>
 </head>
+
 <body>
+
     <header>
         <img src="img/header.png" alt="header">
-            <h1>
-                Black Onyx
-            </h1>
-            <p id="subtitle">
-                Animadvertet verba sapientium et aenigmata eorum.
-            </p>
+            <h1>Black Onyx</h1>
     </header>
-    <nav>
-        <a href="#">Home</a>
+
+    <nav class="navbar">
+        <a href="#" id="home">Home</a>
         <a href="#">1st Element</a>
-        <a href="#">2nd Element</a>
-        <a href="#">3rd Element</a>
+        <div class="dropdown">
+            <div class="dropdown-btn">2nd Element
+                <span class="fa fa-caret-down"></span>
+            </div>
+            <div class="dropdown-content">
+                <a href="#">3nd Element</a>
+                <a href="#">4rth Element</a>
+            </div>
+        </div>
+        <a href="#">5th Element</a>
+        <a href="#" class="mobile"><span class="fa fa-bars"></span></a>
     </nav>
+
     <main class="container">
 
             <section class="firstColumn">
