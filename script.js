@@ -57,11 +57,21 @@ title.addEventListener("click", function(){
     window.open("./index.html", "_self");
 })
 
-//LINK IN ARTICLES
+//LINK IN ARTICLES & ZOOM
 const articles = document.querySelectorAll("article");
 for(let article of articles){
     article.style.cursor = "pointer";
     article.addEventListener('click', link);
+    article.addEventListener("pointerover", function(){
+        article.style.transition = "0.5s";
+        article.style.scale = "1.05";
+        article.style.margin = "1.5rem 0 2.5rem 0";
+    });
+    article.addEventListener("pointerleave", function(){
+        article.style.transition = "0.5s";
+        article.style.scale = "1.0";
+        article.style.margin = "20px 10px 20px 10px";
+    });
 }
 
 function link(){
@@ -71,3 +81,5 @@ function link(){
 const year = new Date().getFullYear();
 const copyright = document.querySelector("#copyright");
 copyright.innerHTML += ` ${year} All rights reserved - Black Onyx`;
+
+
