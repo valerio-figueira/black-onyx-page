@@ -16,7 +16,7 @@ VARIABLES
     --background-color: #d8e1e8;
     --h1-hover-color: rgb(37, 37, 37);
     --prime-structure-size: 960px;
-    --minimum-size: 350px;
+    --minimum-size: 360px;
     --shadow: 0px 0px 5px 2px #00000055;
     --thick-shadow: 0px 0px 7px 3px #00000068;
 }
@@ -123,7 +123,6 @@ nav .mobile{
 }
 
 
-
 /*
 [GRID] - CONTAINER BOX WITH CHILDREN CONTENTS AND SIDEBAR
 */
@@ -143,7 +142,7 @@ main{
     background-color: var(--background-color);
 }
 main > section{
-    padding: 15px;
+    padding: 15px 15px 0 15px;
 }
 section > article{
     background-color: var(--azure-color);

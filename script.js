@@ -28,17 +28,33 @@ function updateTime(){
     let min = new Date().getMinutes();
     let sec = new Date().getSeconds();
 
-    if(min < 10){
-        if(sec < 10){
-            clockTag.innerHTML = `${hour}:0${min}:0${sec}`;
+    if(hour < 10){
+        if(min < 10){
+            if(sec < 10){
+                clockTag.innerHTML = `0${hour}:0${min}:0${sec}`;
+            } else{
+                clockTag.innerHTML = `0${hour}:0${min}:${sec}`;
+            }
         } else{
-            clockTag.innerHTML = `${hour}:0${min}:${sec}`;
-        }        
+            if(sec < 10){
+                clockTag.innerHTML = `0${hour}:${min}:0${sec}`;
+            } else{
+                clockTag.innerHTML = `0${hour}:${min}:${sec}`;
+            }            
+        }
     } else{
-        if(sec < 10){
-            clockTag.innerHTML = `${hour}:${min}:0${sec}`;
+        if(min < 10){
+            if(sec < 10){
+                clockTag.innerHTML = `${hour}:0${min}:0${sec}`;
+            } else{
+                clockTag.innerHTML = `${hour}:0${min}:${sec}`;
+            }
         } else{
-            clockTag.innerHTML = `${hour}:${min}:${sec}`;
+            if(sec < 10){
+                clockTag.innerHTML = `${hour}:${min}:0${sec}`;
+            } else{
+                clockTag.innerHTML = `${hour}:${min}:${sec}`;
+            }
         }
     }
     
