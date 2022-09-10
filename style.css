@@ -71,10 +71,12 @@ nav{
     margin-top: 11px;
 }
 nav > a{
+    display: inline;
     color: var(--azure-color);
     text-decoration: none;
     padding: 13px;
     font-weight: bold;
+    float: left;
 }
 nav > a:hover{    
     color: var(--h1-hover-color);
@@ -185,7 +187,17 @@ aside:hover{
     box-shadow: 1px 1px 1px 1px #0000004a;
 }
 
-
+#title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#clock{
+    font-size: 18px;
+}
+.container{
+    clear: both;
+}
 
 
 img{
@@ -219,32 +231,40 @@ footer > p:hover{
 }
 @media screen and (max-width: 600px) {
     nav{
-        padding: 13px 0;
+        padding: 0;
+        font-size: 20px;
     }
     nav a{
+        float: none;
         display: none;
     }
     nav .mobile{
-        display: inline;
+        display: block;
+        text-align: center;
     }
 
     .responsive a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .responsive .dropdown{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .responsive .dropdown a{
         display: block;
-    }
-    .responsive{
-        position: relative;
-        padding-bottom: 0;
-    }
-    .responsive .mobile{
-        position: absolute;
-        top: 0;
     }
 
     .dropdown{
         display: none;
     }
     .dropdown-content{
-        position: unset;
+        display: none;
+        text-align: center;
+        position: relative;
+        width: 100%;
     }
     
     /*

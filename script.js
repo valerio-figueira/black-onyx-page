@@ -1,3 +1,5 @@
+import Posts from "./Posts.js";
+
 const mobile = document.getElementsByClassName("mobile")[0];
 
 mobile.addEventListener('click', showNav);
@@ -10,7 +12,6 @@ function showNav(){
     if(nav.className === "navbar"){
         nav.className += " responsive";
         mobile.className += " active";
-        home.style.marginTop = "33.8px";
         dropdown.className += " hidden";
     } else{
         nav.className = "navbar";
@@ -98,4 +99,26 @@ const year = new Date().getFullYear();
 const copyright = document.querySelector("#copyright");
 copyright.innerHTML += ` ${year} All rights reserved - Black Onyx`;
 
+setPosts();
+function setPosts(){
+    const firstColumn = document.querySelector(".firstColumn");
+    const secondColumn = document.querySelector(".secondColumn");
+    const thirdColumn = document.querySelector(".thirdColumn");
 
+    firstColumn.innerHTML = getPosts(0, 2);
+    secondColumn.innerHTML = getPosts(2, 5);
+    thirdColumn.innerHTML = getPosts(5, 7);
+};
+
+function getPosts(start, end){
+    return Posts.getHtml().slice(start, end).map(post => {
+        return `
+            <article class="post">
+                <h1>${post.title}</h1>
+                    <img src="${post.img}" alt="${post.title}">
+                    <p>${post.text}</p>
+                <aside>${post.author}</aside>
+            </article>
+        `;
+    }).join('');
+}
